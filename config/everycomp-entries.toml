@@ -1,0 +1,29 @@
+
+#Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
+[types]
+
+	[types.wood_type]
+
+		[types.wood_type.gtceu]
+			rubber = true
+
+	[types.leaves_type]
+
+		[types.leaves_type.exdeorum]
+			infested = true
+
+		[types.leaves_type.gtceu]
+			rubber = true
+
+#Disables specific entries
+[entries]
+
+	[entries.wood_type]
+
+		[entries.wood_type.farmersdelight]
+			cabinet = true
+
+		[entries.wood_type.create]
+			window_pane = true
+			window = true
+

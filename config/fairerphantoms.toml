@@ -1,0 +1,9 @@
+
+[fairerphantoms]
+	#Number of ticks Phantoms are dropstunned after being hit
+	"Dropstun Length" = 40.0
+	#Chance a Phantom will be a King (Large, and cause a chain-reaction upon death) - 0.12 = 12%
+	"Phantom King Spawn Chance" = 0.05
+	#Level of hinderance Phantoms receive when hit
+	"Dropstun Level Amplifier" = 0.0
+
