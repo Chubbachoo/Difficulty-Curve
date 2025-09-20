@@ -1,0 +1,11 @@
+{
+	"item.minecraft.prismarine_crystals": "Prismarine Crystal",
+	"item.minecraft.prismarine_shard": "Prismarine Shards",
+	"advancements.adventure.sleep_in_bed.title": "Sweet Dreams",
+	"advancements.adventure.sleep_in_bed.description": "Don't fear what's coming",
+	"block.minecraft.bed.no_sleep": "No need for sleep tonight, sweet dreams are overrated",
+	"block.minecraft.bed.not_safe": "No need for sleep tonight, sweet dreams are overrated",
+	"block.minecraft.bed.obstructed": "No need for sleep tonight, sweet dreams are overrated",
+	"block.minecraft.bed.occupied": "No need for sleep tonight, sweet dreams are overrated",
+	"block.minecraft.bed.too_far_away": "No need for sleep tonight, sweet dreams are overrated"
+}
