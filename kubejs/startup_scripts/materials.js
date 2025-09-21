@@ -10,7 +10,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
 	GTMaterials.Iron.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE);
 	GTMaterials.Zinc.setProperty(PropertyKey.ORE, new $OreProperty());
 	GTMaterials.Ytterbium.setProperty(PropertyKey.INGOT, new $IngotProperty());
-	GTMaterials.Ytterbium.setProperty(PropertyKey.BLAST, new $BlastProperty(7200, "higher", GTValues.VA[GTValues.IV], 900, -1, -1));
+	GTMaterials.Ytterbium.setProperty(PropertyKey.BLAST, new $BlastProperty(7200, "higher", GTValues.VA[GTValues.IV], 900, -1, -1))
 	
 	//primarine line chemicals
 	event.create("phosgene")
@@ -101,11 +101,12 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
 		.components("carbon")
 		.color(0x444444).iconSet(GTMaterialIconSet.LIGNITE)
 	//mod integration materials
+	//ae2
 	event.create("charged_certus_quartz")
 		.gem()
 		.color(0x9fd5e8)
 		.iconSet(GTMaterialIconSet.CERTUS)
-		.flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+		.flags(GTMaterialFlags.DISABLE_DECOMPOSITION, GTMaterialFlags.FLAMMABLE)
 		.components("certus_quartz")
 	event.create("fluix")
 		.gem()
@@ -113,6 +114,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
 		.iconSet(GTMaterialIconSet.CERTUS)
 		.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.CRYSTALLIZABLE)
 		.components("charged_certus_quartz", "redstone", "nether_quartz")
+	//create
 	event.create("asurine")
 		.dust()
 		.components("9x zinc", "saltpeter")
@@ -141,15 +143,23 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
 GTCEuStartupEvents.materialModification(event => {
 	const $AEItems = Java.loadClass("appeng.core.definitions.AEItems");
 	const $AEBlocks = Java.loadClass("appeng.core.definitions.AEBlocks");
+	//const $CreateItems = Java.loadClass("com.simibubi.create.AllItems");
 	const $CreatePaletteBlocks = Java.loadClass("com.simibubi.create.content.decoration.palettes.AllPaletteStoneTypes");
 	
-	const $PBeeItems = Java.loadClass("cy.jdkdigital.productivebees.init.ModItems");
-	const $PBeeBlocks = Java.loadClass("cy.jdkdigital.productivebees.init.ModBlocks");
+	/*const $PBeeItems = Java.loadClass("cy.jdkdigital.productivebees.ModItems");
+	const $PBeeBlocks = Java.loadClass("cy.jdkdigital.productivebees.ModBlocks");*/
 	
+	
+	//GTMaterials.Naquadria.cableProperties(GTValues.VA[GTValues.UEV], 1, 16)
+	
+	TagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("prismarine"), Ingredient.of("minecraft:prismarine_crystals"))
+	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("prismarine"), Ingredient.of("minecraft:prismarine_shard"))
+	
+	//create compat
 	GTMaterials.Zinc.setMaterialARGB(0xd6ffdc)
 	GTMaterials.Zinc.setMaterialSecondaryARGB(0x31544e)
-	//GTMaterials.Naquadria.cableProperties(GTValues.VA[GTValues.UEV], 1, 16)
-	//TagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("rose_quartz"), $CreateItems.ROSE_QUARTZ)
+	
+	//tagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("rose_quartz"), $CreateItems.ROSE_QUARTZ)
 	TagPrefix.block.modifyMaterialAmount(GTMaterialRegistry.getMaterial("rose_quartz"), 4)
 	
 	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("asurine"), $CreatePaletteBlocks.ASURINE)
@@ -157,13 +167,14 @@ GTCEuStartupEvents.materialModification(event => {
 	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("ochrum"), $CreatePaletteBlocks.OCHRUM)
 	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("veridium"), $CreatePaletteBlocks.VERIDIUM)
 	
-	TagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("prismarine"), Ingredient.of("minecraft:prismarine_crystals"))
-	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("prismarine"), Ingredient.of("minecraft:prismarine_shard"))
-	
+	//ae2 compat
 	TagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("certus_quartz"), $AEItems.CERTUS_QUARTZ_CRYSTAL)
 	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("certus_quartz"), $AEItems.CERTUS_QUARTZ_DUST)
 	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("certus_quartz"), $AEBlocks.QUARTZ_BLOCK)
 	
+	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("charged_certus_quartz"), $AEItems.CERTUS_QUARTZ_DUST)
+	TagPrefix.dustSmall.setIgnored(GTMaterialRegistry.getMaterial("charged_certus_quartz"))
+	TagPrefix.dustTiny.setIgnored(GTMaterialRegistry.getMaterial("charged_certus_quartz"))
 	TagPrefix.gem.setIgnored(GTMaterialRegistry.getMaterial("charged_certus_quartz"), $AEItems.CERTUS_QUARTZ_CRYSTAL_CHARGED)
 	TagPrefix.block.modifyMaterialAmount(GTMaterialRegistry.getMaterial("charged_certus_quartz"), 4)
 	
@@ -174,8 +185,9 @@ GTCEuStartupEvents.materialModification(event => {
 	
 	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("ender_pearl"), $AEItems.ENDER_DUST)
 	
-	TagPrefix.ingot.setIgnored(GTMaterialRegistry.getMaterial("wax"), $PBeeItems.WAX)
-	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("wax"), $PBeeBlocks.WAX_BLOCK)
+	//productive bees compat
+	/*TagPrefix.ingot.setIgnored(GTMaterialRegistry.getMaterial("wax"), $PBeeItems.WAX)
+	TagPrefix.block.setIgnored(GTMaterialRegistry.getMaterial("wax"), $PBeeBlocks.WAX_BLOCK)*/
 })
 GTCEuStartupEvents.craftingComponents(event => {
 	event.setMaterialEntry(GTCraftingComponents.PLATE, GTValues.UEV, new MaterialEntry("plate", "gtceu:activated_prismarine"))

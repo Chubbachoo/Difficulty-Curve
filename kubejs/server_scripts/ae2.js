@@ -17,6 +17,7 @@ ServerEvents.recipes(event => {
 		.duration(2000)
 		.EUt(250)
 		.circuit(7)
+	event.remove({"output":"ae2:meteorite_compass"})
 	event.recipes.gtceu.assembler('make_magic_compass')
 		.itemInputs(
 			'2x ae2:charged_certus_quartz_crystal',
@@ -36,6 +37,7 @@ ServerEvents.recipes(event => {
 		)
 		.duration(100)
 		.EUt(24)
+	event.remove({"output":"ae2:quartz_glass"})
 	event.recipes.gtceu.electric_blast_furnace('fuse_quartz')
 		.itemInputs(
 			'#forge:dusts/certus_quartz',
@@ -47,6 +49,7 @@ ServerEvents.recipes(event => {
 		.duration(500)
 		.EUt(50)
 		.blastFurnaceTemp(1000)
+	event.remove({"output":"ae2:quartz_vibrant_glass"})
 	event.recipes.gtceu.electric_blast_furnace('fuse_vibrant_quartz')
 		.itemInputs(
 			'#forge:dusts/certus_quartz',
@@ -68,6 +71,7 @@ ServerEvents.recipes(event => {
 		)
 		.duration(50)
 		.EUt(4)
+	event.remove({"output":"ae2:sky_stone_chest"})
 	event.recipes.gtceu.assembler('sky_stone_chest')
 		.itemInputs(
 			'8x ae2:sky_stone_block'
@@ -78,6 +82,7 @@ ServerEvents.recipes(event => {
 		.duration(200)
 		.EUt(4)
 		.circuit(8)
+	event.remove({"output":"ae2:smooth_sky_stone_chest"})
 	event.recipes.gtceu.assembler('smooth_sky_stone_chest')
 		.itemInputs(
 			'8x ae2:smooth_sky_stone_block'
@@ -88,6 +93,7 @@ ServerEvents.recipes(event => {
 		.duration(200)
 		.EUt(4)
 		.circuit(8)
+	event.remove({"output":"ae2:sky_stone_tank"})
 	event.recipes.gtceu.assembler('sky_stone_tank')
 		.itemInputs(
 			'4x ae2:sky_stone_block',
@@ -101,6 +107,7 @@ ServerEvents.recipes(event => {
 		.circuit(4)
 	event.remove({"id":"ae2:blasting/silicon_from_certus_quartz_dust"})
 	event.remove({"id":"ae2:smelting/silicon_from_certus_quartz_dust"})
+	event.replaceOutput({"output":"ae2:silicon"}, "ae2:silicon", "gtceu:silicon_dust")
 	event.remove({"type":"ae2:inscriber"})
 	event.recipes.gtceu.forming_press('engineer_processor')
 		.itemInputs(

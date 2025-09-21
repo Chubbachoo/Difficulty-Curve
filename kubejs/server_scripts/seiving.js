@@ -37,6 +37,10 @@ ServerEvents.recipes(event => {
 	event.remove({"output":"#forge:dusts/prismarine", "type":"exdeorum:compressed_sieve"})
 	event.remove({"output":"#forge:dusts/gunpowder", "type":"exdeorum:sieve"})
 	event.remove({"output":"#forge:dusts/gunpowder", "type":"exdeorum:compressed_sieve"})
+	event.remove({"output":"#forge:dusts/certus_quartz", "type":"exdeorum:sieve"})
+	event.remove({"output":"#forge:dusts/certus_quartz", "type":"exdeorum:compressed_sieve"})
+	event.remove({"output":"ae2:sky_dust", "type":"exdeorum:sieve"})
+	event.remove({"output":"ae2:sky_dust", "type":"exdeorum:compressed_sieve"})
 	
 	event.remove({"output":"#forge:crops", "type":"exdeorum:sieve"})
 	event.remove({"output":"#forge:crops", "type":"exdeorum:compressed_sieve"})
