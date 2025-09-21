@@ -196,6 +196,16 @@ ServerEvents.recipes(event => {
 	event.remove({"output":"create_enchantment_industry:disenchanter"})
 	event.replaceInput({"input":"create:rose_quartz"}, "create:rose_quartz", "#forge:gems/rose_quartz")
 	event.remove({"id":"create:crafting/materials/rose_quartz"})
+	
+	event.remove({"id":"exdeorum:stone_barrel"})
+	event.shaped("gtceu:wrought_iron_plate",[
+		"S S",
+		"S S",
+		"SSS"
+	], {
+		S: "#forge:plates/stone"
+	})
+
 })
 ServerEvents.tags("item", event => {
 	event.add("exdeorum:hammers", "#forge:tools/hammers")
