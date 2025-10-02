@@ -111,6 +111,7 @@ ServerEvents.recipes(event => {
 	})
 	
 	event.remove({"output":"create_sa:hydraulic_engine"})
+	event.remove({"output":"create_sa:heat_engine"})
 	
 	event.replaceInput({not:{"mod":"gtceu"}}, "gtceu:ulv_machine_casing", "create:andesite_casing")
 	event.replaceInput({"output":"greate:andesite_alloy_mechanical_mixer"}, "#forge:plates/andesite_alloy", "create:precision_mechanism")
@@ -153,6 +154,12 @@ ServerEvents.recipes(event => {
 	
 	
 	event.remove({"id":"create:crafting/materials/copper_nugget"})
+	event.remove({"id":"create:crafting/materials/copper_ingot"})
+	
+	
+	
+	event.remove({"id":"greate:compacting/integration/gtceu/compressor/compressed_fireclay"})
+	event.recipes.greate.compacting("gtceu:firebrick", ["#forge:dusts/fireclay"]).recipeTier(1).heated()
 })
 ServerEvents.tags("item", event => {
 	event.add("create:mechanical_pistons","create:mechanical_piston")

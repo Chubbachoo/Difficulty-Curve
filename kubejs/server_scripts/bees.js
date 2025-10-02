@@ -126,6 +126,8 @@ ServerEvents.recipes(event => {
 		)
 		.duration(100)
 		.EUt(1920)
+	
+	event.remove({"id": "productivebees:bee_breeding/gems/lapis_bee"})
 })
 
 

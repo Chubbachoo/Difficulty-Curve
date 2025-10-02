@@ -52,8 +52,7 @@ ServerEvents.recipes(event => {
 	event.remove({"output":"ae2:quartz_vibrant_glass"})
 	event.recipes.gtceu.electric_blast_furnace('fuse_vibrant_quartz')
 		.itemInputs(
-			'#forge:dusts/certus_quartz',
-			'#forge:glass',
+			'ae2:quartz_glass',
 			'#forge:dusts/glowstone'
 		)
 		.itemOutputs(
@@ -200,4 +199,54 @@ ServerEvents.recipes(event => {
 		.duration(250)
 		.EUt(30)
 	
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_1k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_2k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_4k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_8k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_16k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_32k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_64k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_128k"})
+	event.remove({"id":"ae2:network/cells/fluid_storage_cell_256k"})
+	event.remove({"id":"ae2:network/cells/fluid_cell_housing"})
+	event.recipes.gtceu.assembler('fluid_cell_housing')
+		.itemInputs(
+			'#forge:double_plates/copper',
+			'#forge:foils/gold',
+			'ae2:quartz_glass',
+			'#forge:foils/red_alloy',
+			'#forge:plates/certus_quartz'
+		)
+		.itemOutputs(
+			'ae2:fluid_cell_housing'
+		)
+		.duration(250)
+		.EUt(30)
+	event.remove({"id":"ae2:network/cells/item_storage_cell_1k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_2k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_4k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_8k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_16k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_32k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_64k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_128k"})
+	event.remove({"id":"ae2:network/cells/item_storage_cell_256k"})
+	event.remove({"id":"ae2:network/cells/item_cell_housing"})
+	event.recipes.gtceu.assembler('item_cell_housing')
+		.itemInputs(
+			'#forge:double_plates/steel',
+			'#forge:foils/gold',
+			'ae2:quartz_glass',
+			'#forge:foils/red_alloy',
+			'#forge:plates/certus_quartz'
+		)
+		.itemOutputs(
+			'ae2:item_cell_housing'
+		)
+		.duration(250)
+		.EUt(30)
+	
+	event.remove({"output":"ae2:charger"})
+	event.remove({"type":"ae2:charger"})
+	event.remove({"output":"ae2:crank"})
 })

@@ -41,6 +41,11 @@ ServerEvents.recipes(event => {
 	event.remove({"output":"#forge:dusts/certus_quartz", "type":"exdeorum:compressed_sieve"})
 	event.remove({"output":"ae2:sky_dust", "type":"exdeorum:sieve"})
 	event.remove({"output":"ae2:sky_dust", "type":"exdeorum:compressed_sieve"})
+	event.remove({"output":"minecraft:sculk_shreiker", "type":"exdeorum:sieve"})
+	event.remove({"output":"minecraft:sculk_shreiker", "type":"exdeorum:compressed_sieve"})
+	
+	event.replaceOutput({"output":"minecraft:bone", "type":"exdeorum:sieve"}, "minecraft:bone", "biomancy:bone_fragments")
+	event.replaceOutput({"output":"minecraft:bone", "type":"exdeorum:compressed_sieve"}, "minecraft:bone", "biomancy:bone_fragments")
 	
 	event.remove({"output":"#forge:crops", "type":"exdeorum:sieve"})
 	event.remove({"output":"#forge:crops", "type":"exdeorum:compressed_sieve"})
@@ -110,6 +115,10 @@ ServerEvents.recipes(event => {
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_cassiterite_ore", "minecraft:gravel", "exdeorum:compressed/gravel", 0.02)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_zinc_ore", "minecraft:gravel", "exdeorum:compressed/gravel", 0.03)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_realgar_ore", "minecraft:gravel", "exdeorum:compressed/gravel", 0.03)
+	sieving("exdeorum:golden_mesh", "gtceu:asurine_dust", "minecraft:gravel", "exdeorum:compressed/gravel", 0.02)
+	sieving("exdeorum:golden_mesh", "gtceu:crimsite_dust", "minecraft:gravel", "exdeorum:compressed/gravel", 0.02)
+	sieving("exdeorum:golden_mesh", "gtceu:ochrum_dust", "minecraft:gravel", "exdeorum:compressed/gravel", 0.02)
+	sieving("exdeorum:golden_mesh", "gtceu:veridium_dust", "minecraft:gravel", "exdeorum:compressed/gravel", 0.02)
 	
 	
 	
@@ -153,6 +162,7 @@ ServerEvents.recipes(event => {
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_stibnite_ore", "exdeorum:crushed_blackstone", "exdeorum:compressed/crushed_blackstone", 0.03)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_tetrahedrite_ore", "exdeorum:crushed_blackstone", "exdeorum:compressed/crushed_blackstone", 0.06)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_chalcocite_ore", "exdeorum:crushed_blackstone", "exdeorum:compressed/crushed_blackstone", 0.06)
+	sieving("exdeorum:golden_mesh", "gtceu:scorchia_dust", "exdeorum:crushed_netherrack", "exdeorum:compressed/crushed_netherrack", 0.02)
 	
 	
 	
@@ -192,25 +202,34 @@ ServerEvents.recipes(event => {
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_spodumene_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.06)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_lepidolite_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.06)
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_tricalcium_phosphate_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.06)
+	sieving("exdeorum:golden_mesh", "gtceu:limestone_dust", "minecraft:sand", "exdeorum:compressed/sand", 0.02)
 	
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_salt_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.20)
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_rock_salt_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.20)
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_spodumene_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.10)
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_lepidolite_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.10)
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_tricalcium_phosphate_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.12)
+	sieving("exdeorum:golden_mesh", "gtceu:limestone_dust", "minecraft:sand", "exdeorum:compressed/sand", 0.05)
 	
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_salt_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.30)
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_rock_salt_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.30)
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_spodumene_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.15)
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_lepidolite_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.10)
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_tricalcium_phosphate_ore", "minecraft:sand", "exdeorum:compressed/sand", 0.25)
+	sieving("exdeorum:golden_mesh", "gtceu:limestone_dust", "minecraft:sand", "exdeorum:compressed/sand", 0.10)
 	
 	
 	
 	sieving("exdeorum:iron_mesh", "gtceu:crushed_oilsands_ore", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.06)
+	
 	sieving("exdeorum:golden_mesh", "gtceu:crushed_oilsands_ore", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.08)
+	sieving("exdeorum:golden_mesh", "gtceu:scoria_dust", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.02)
+	
 	sieving("exdeorum:diamond_mesh", "gtceu:crushed_oilsands_ore", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.16)
+	sieving("exdeorum:golden_mesh", "gtceu:scoria_dust", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.05)
+	
 	sieving("exdeorum:netherite_mesh", "gtceu:crushed_oilsands_ore", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.32)
+	sieving("exdeorum:golden_mesh", "gtceu:scoria_dust", "minecraft:soul_sand", "exdeorum:compressed/soul_sand", 0.10)
 	
 	
 	

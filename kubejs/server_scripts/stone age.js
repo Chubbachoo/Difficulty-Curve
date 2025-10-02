@@ -192,8 +192,6 @@ ServerEvents.recipes(event => {
 		"result":"minecraft:gravel",
 		"result_amount":1.0
 	})
-	event.remove({"output":"biomancy:primordial_core"})
-	event.remove({"output":"create_enchantment_industry:disenchanter"})
 	event.replaceInput({"input":"create:rose_quartz"}, "create:rose_quartz", "#forge:gems/rose_quartz")
 	event.remove({"id":"create:crafting/materials/rose_quartz"})
 	
@@ -205,7 +203,9 @@ ServerEvents.recipes(event => {
 	], {
 		S: "#forge:plates/stone"
 	})
-
+	
+	event.remove({"id":"exdeorum:barrel_mixing/end_stone"})
+	event.remove({"id":"exdeorum:barrel_mixing/magma_cream"})
 })
 ServerEvents.tags("item", event => {
 	event.add("exdeorum:hammers", "#forge:tools/hammers")

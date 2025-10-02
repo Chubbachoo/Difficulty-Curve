@@ -74,56 +74,7 @@ ServerEvents.recipes(event => {
 		.duration(20)
 		.EUt(16)
 		.circuit(2)
-	event.recipes.gtceu.mixer("convert_xp_sophisticated")
-		.notConsumable(
-			"create_enchantment_industry:experience_rotor"
-		)
-		.inputFluids(
-			Fluid.of("sophisticatedcore:xp_still", 250)
-		)
-		.outputFluids(
-			Fluid.of("create_enchantment_industry:experience", 10)
-		)
-		.duration(20)
-		.EUt(60)
-	event.recipes.gtceu.mixer("convert_xp_cofh")
-		.notConsumable(
-			"create_enchantment_industry:experience_rotor"
-		)
-		.inputFluids(
-			Fluid.of("cofh_core:experience", 250)
-		)
-		.outputFluids(
-			Fluid.of("create_enchantment_industry:experience", 10)
-		)
-		.duration(20)
-		.EUt(60)
-	event.recipes.gtceu.mixer("convert_sophisticated_xp")
-		.notConsumable(
-			"create_enchantment_industry:experience_rotor"
-		)
-		.outputFluids(
-			Fluid.of("sophisticatedcore:xp_still", 250)
-		)
-		.inputFluids(
-			Fluid.of("create_enchantment_industry:experience", 10)
-		)
-		.duration(20)
-		.EUt(60)
-		.circuit(1)
-	event.recipes.gtceu.mixer("convert_cofh_xp")
-		.notConsumable(
-			"create_enchantment_industry:experience_rotor"
-		)
-		.outputFluids(
-			Fluid.of("cofh_core:experience", 250)
-		)
-		.inputFluids(
-			Fluid.of("create_enchantment_industry:experience", 10)
-		)
-		.duration(20)
-		.EUt(60)
-		.circuit(1)
+	
 	event.recipes.greate.haunting("exdeorum:witch_water_bucket", "minecraft:water_bucket").recipeTier(0)
 	event.recipes.greate.haunting("exdeorum:porcelain_witch_water_bucket", "exdeorum:porcelain_water_bucket").recipeTier(0)
 	event.recipes.greate.haunting("framedblocks:framed_soul_torch", "framedblocks:framed_torch").recipeTier(0)

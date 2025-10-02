@@ -154,6 +154,33 @@ ServerEvents.recipes(event => {
 		)
 		.duration(20)
 		.EUt(2)
+	event.recipes.gtceu.forge_hammer("hammer_cgranite")
+		.itemInputs(
+			"cobbled:cobbled_granite"
+		)
+		.itemOutputs(
+			"minecraft:gravel"
+		)
+		.duration(20)
+		.EUt(2)
+	event.recipes.gtceu.forge_hammer("hammer_candesite")
+		.itemInputs(
+			"cobbled:cobbled_andesite"
+		)
+		.itemOutputs(
+			"minecraft:gravel"
+		)
+		.duration(20)
+		.EUt(2)
+	event.recipes.gtceu.forge_hammer("hammer_cdiorite")
+		.itemInputs(
+			"cobbled:cobbled_diorite"
+		)
+		.itemOutputs(
+			"minecraft:gravel"
+		)
+		.duration(20)
+		.EUt(2)
 	event.remove({"output":"create:crushed_raw_iron"})
 	event.remove({"output":"create:crushed_raw_gold"})
 	event.remove({"output":"create:crushed_raw_copper"})

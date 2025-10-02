@@ -51,4 +51,16 @@ ServerEvents.recipes(event => {
 		S: "#forge:plates/diamond"
 	})
 	event.remove({"output" : "constructionwand:infinity_wand"})
+	
+	event.remove({"output" : "create:crafting/pallettes/scorchia"})
+	event.remove({"output" : "create:smelting/scoria"})
+})
+ServerEvents.tags("item", event => {
+	event.add("forge:storage_blocks/asurine", "create:asurine")
+	event.add("forge:storage_blocks/crimsite", "create:crimsite")
+	event.add("forge:storage_blocks/ochrum", "create:ochrum")
+	event.add("forge:storage_blocks/veridium", "create:veridium")
+	event.add("forge:storage_blocks/limestone", "create:limestone")
+	event.add("forge:storage_blocks/scoria", "create:scoria")
+	event.add("forge:storage_blocks/scorchia", "create:scorchia")
 })
