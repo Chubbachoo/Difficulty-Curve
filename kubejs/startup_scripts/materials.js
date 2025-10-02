@@ -227,10 +227,10 @@ GTCEuStartupEvents.materialModification(event => {
 	//exdeorum
 	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("wood"))
 	
-	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("iron"))
+	/*TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("iron"))
 	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("copper"))
 	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("gold"))
-	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("zinc"))
+	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("zinc"))*/
 	
 	//create
 	GTMaterials.Zinc.setMaterialARGB(0xd6ffdc)
@@ -307,10 +307,10 @@ StartupEvents.postInit(event => {
 	//exdeorum compat
 	TagPrefix.dust.setIgnored(GTMaterialRegistry.getMaterial("wood"), "exdeorum:wood_chippings")
 	
-	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("iron"), "exdeorum:iron_ore_chunk")
+	/*TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("iron"), "exdeorum:iron_ore_chunk")
 	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("copper"), "exdeorum:copper_ore_chunk")
 	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("gold"), "exdeorum:gold_ore_chunk")
-	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("zinc"), "exdeorum:zinc_ore_chunk")
+	TagPrefix.ore_chunk.setIgnored(GTMaterialRegistry.getMaterial("zinc"), "exdeorum:zinc_ore_chunk")*/
 	
 	//create compat
 	TagPrefix.block.modifyMaterialAmount(GTMaterialRegistry.getMaterial("rose_quartz"), 4)
